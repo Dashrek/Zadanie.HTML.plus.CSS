@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz reklamacyjny</title>
+    <link rel="stylesheet" href="../Styles_Home/home.css">
+    <link rel="stylesheet" href="../Styles_Home/Styles_Form/Form.css">
+</head>
+<body>
+<script src="../scripts/script.js"></script>
+
+<div class="form-container subfont1">
+    <h2 class="subfont1 nag">Formularz reklamacyjny</h2>
+    <form action="#" method="post">
+
+        <!-- Dane klienta -->
+        <label for="name">Imię i nazwisko</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Adres e-mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Numer telefonu (opcjonalnie)</label>
+        <input type="text" id="phone" name="phone">
+
+        <!-- Dane zamówienia -->
+        <label for="order-number">Numer zamówienia</label>
+        <input type="text" id="order-number" name="order-number" required>
+
+        <label for="order-date">Data zakupu</label>
+        <input type="date" id="order-date" name="order-date" required>
+
+        <label for="place">Miejsce zakupu</label>
+        <input type="text" id="place" name="place" required>
+
+        <!-- Informacje o produkcie -->
+        <label>Typ produktu</label>
+        <div class="radio-group">
+            <label><input type="radio" name="product-type" value="Książka" required> Książka</label>
+            <label><input type="radio" name="product-type" value="Film"> Film</label>
+            <label><input type="radio" name="product-type" value="Gra"> Gra</label>
+        </div>
+
+        <label for="title">Tytuł</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="creator">Autor / Reżyser / Wydawca</label>
+        <input type="text" id="creator" name="creator" required>
+
+        <label for="code">Numer seryjny / kod produktu (opcjonalnie)</label>
+        <input type="text" id="code" name="code">
+
+        <!-- Opis problemu -->
+        <label>Problem z produktem</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="issue" value="Produkt uszkodzony fizycznie"> Produkt uszkodzony fizycznie</label>
+            <label><input type="checkbox" name="issue" value="Produkt nie działa"> Produkt nie działa</label>
+            <label><input type="checkbox" name="issue" value="Brak części/składników"> Brak części/składników</label>
+            <label><input type="checkbox" name="issue" value="Inny problem"> Inny problem</label>
+        </div>
+
+        <label for="details">Szczegółowy opis problemu</label>
+        <textarea id="details" name="details" required></textarea>
+
+        <!-- Preferowane rozwiązanie -->
+        <label>Preferowane rozwiązanie</label>
+        <div class="radio-group">
+            <label><input type="radio" name="solution" value="Wymiana" required> Wymiana na nowy egzemplarz</label>
+            <label><input type="radio" name="solution" value="Zwrot"> Zwrot pieniędzy</label>
+            <label><input type="radio" name="solution" value="Naprawa"> Naprawa produktu</label>
+        </div>
+
+        <!-- Zgoda -->
+        <label><input type="checkbox" name="consent" required> Wyrażam zgodę na przetwarzanie moich danych osobowych w celu realizacji zgłoszenia.</label>
+
+        <button type="submit" class="submit-btn">Wyślij zgłoszenie</button>
+    </form>
+</div>
+
+</body>
+</html>

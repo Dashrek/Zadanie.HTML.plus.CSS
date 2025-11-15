@@ -1,0 +1,434 @@
+body,html{
+    background-color: #B67635;
+    min-height: 110vh;
+    cursor: url('../images/wand.png') 5 0, auto;
+    transition: all 0.3s ease;
+    font-size:16px;
+    overflow-x: hidden;
+}
+.bodybuild{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+    overflow: hidden;
+}
+.Garamond{
+    font-family: 'Garamond';
+    font-weight: 400;
+}
+.Garamond h1, h2, h3, h4, h5, h6 {
+    font-weight: normal; /* resetuje bold */
+    font-style: normal;
+}
+.Garamond b{
+    font-weight: 500;
+}
+.Garamond strong{
+    font-weight: 600;
+}
+.Garamond strong b{
+    font-weight: 700;
+}
+.Garamond strong b b{
+    font-weight: 800;
+}
+.Garamond i{
+font-style:italic;}
+
+.cell_footer {
+    display: flex;
+    justify-content: center;  /* poziomo */
+    align-items: flex-start;  /* pionowo (bo top) */
+    text-align: left;       /* tekst na środku */
+    width: 100%;
+}
+.subfont{
+    font-size: 1.3em;
+    display: flex;
+    gap: 10px;
+    color: #6bc6f2;
+    -webkit-text-stroke: 0.5px #293873;
+    animation: glow1 2s infinite alternate;
+}
+.subfont a{
+    color: #28b4f7;
+    text-decoration: underline;
+    cursor: url('../images/owl.png') 5 0, auto;
+}
+.subfont span{
+    color: #28b4f7;
+    text-decoration: underline;
+    cursor: url('../images/witch.png') 5 0, auto;
+}
+
+@font-face {
+    font-family: 'Harry_Potter_PL';
+    src: url('../fonts/Harry_Potter/HarryPotterPL.ttf') format('truetype');
+}
+/* Regular */
+@font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/EB_Garamond/static/EBGaramond-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/EB_Garamond/static/EBGaramond-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/EB_Garamond/static/EBGaramond-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Medium Italic */
+@font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/EB_Garamond/static/EBGaramond-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* SemiBold */
+@font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/EB_Garamond/static/EBGaramond-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* SemiBold Italic */
+@font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/EB_Garamond/static/EBGaramond-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/EB_Garamond/static/EBGaramond-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/EB_Garamond/static/EBGaramond-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* ExtraBold */
+@font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/EB_Garamond/static/EBGaramond-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* ExtraBold Italic */
+@font-face {
+    font-family: 'Garamond';
+    src: url('../fonts/EB_Garamond/static/EBGaramond-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+.linia_pierwsza{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.box { /*wymiary przycisków */
+    display: inline-block;
+    width: 300px;
+    height: 90px;
+    text-align: center;
+    line-height: 35px;/* wyśrodkowanie tekstu w pionie */
+}
+
+.menu .box button {
+    border-radius: 5px; /* bazowo wszystkie środkowe */
+}
+
+/* pierwszy przycisk */
+.menu .box:first-child button {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* ostatni przycisk */
+.menu .box:last-child button {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.box button {
+    width: 100%;
+    height: 100%;
+    border: #926F9A solid 2.5px;
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,0.6), /* błysk wewnątrz */
+    0 4px 6px rgba(0,0,0,0.3);
+    border-radius: 100px;
+    background-color: #8D553E;
+    color: #E6C852;
+    font-size: 37px;
+    -webkit-text-stroke: 0.7px #293873;
+    font-family: Harry_Potter_PL;
+    margin: 2px;
+    text-shadow:
+            2px 2px 2px rgba(0,0,0,0.8),
+            -2px -2px 2px rgba(255,255,255,0.2);/*text-shadow: 4px 4px 8px black;*/
+    transition: all 0.3s ease;
+}
+.box button:hover, button:focus,button:active {
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.3), /* błysk wewnątrz */
+    inset -2px -2px 2px rgba(255,255,255,0.6);
+    -webkit-text-stroke: 0.55px #293873;
+    text-shadow:
+            2px 2px 2px rgba(0,0,0,0.8),
+            2px 2px 4px rgba(0,0,0,0.8),
+            -2px 2px 2px rgba(0,0,0,0.8),
+            -2px 2px 4px rgba(0,0,0,0.8),
+            -2px -2px 2px rgba(255,255,255,0.2),
+            -2px -2px 4px rgba(255,255,255,0.2),
+            2px -2px 2px rgba(255,255,255,0.2),
+            2px -2px 4px rgba(255,255,255,0.2);/*text-shadow: 4px 4px 8px black;*/
+}
+.box button:hover {
+    cursor: url('../images/wand_hover.png') 5 0, auto;
+}
+.box button:focus {
+    cursor: url('../images/wand_hover.png') 5 0, auto;
+}
+.box button:active {
+    cursor: url('../images/wand_active.png') 5 0, auto;
+    animation: clickFlash 0.9s ease-out;
+}
+.btn-gold{
+    flex: 0 0 auto;
+    width: 60px;
+    height: 60px;
+}
+@keyframes clickFlash {
+    0% { box-shadow: 0 0 10px 3px rgba(255, 230, 100, 0.8),
+        inset 2px 2px 2px rgba(0,0,0,0.3), /* błysk wewnątrz */
+        inset -2px -2px 2px rgba(255,255,255,0.6);
+    }
+    66% { box-shadow: 0 0 0 0 rgba(255, 230, 100, 0),
+        inset 4px 4px 5px rgba(0,0,0,0.3), /* błysk wewnątrz */
+        inset -4px -4px 5px rgba(255,255,255,0.6);
+    }
+    100% { box-shadow: inset 2px 2px 2px rgba(255,255,255,0.6), /* błysk wewnątrz */
+    0 4px 6px rgba(0,0,0,0.3);
+    }
+}
+@keyframes glow1 {
+    0%, 100% {
+        text-shadow:
+                2px 2px 2px rgba(0,0,0,0.8),
+                -2px -2px 2px rgba(255,255,255,0.2),0 0 5px #3b6e87, 0 0 15px #5196b8, 0 0 20px #6bc6f2,2px 2px 4px rgba(0,0,0,0.8),
+                -2px -2px 2px rgba(255,255,255,0.2);
+    }
+    50% {
+        text-shadow:
+                2px 2px 2px rgba(0,0,0,0.8),
+                2px 2px 4px rgba(0,0,0,0.8),
+                -2px 2px 2px rgba(0,0,0,0.8),
+                -2px 2px 4px rgba(0,0,0,0.8),
+                -2px -2px 2px rgba(255,255,255,0.2),
+                -2px -2px 4px rgba(255,255,255,0.2),
+                2px -2px 2px rgba(255,255,255,0.2),
+                2px -2px 4px rgba(255,255,255,0.2),0 0 5px #419294, 0 0 17px #56c2c4, 0 0 30px #6bf2f4,2px 2px 4px rgba(0,0,0,0.8),
+                -2px -2px 2px rgba(255,255,255,0.2);
+
+    }
+}
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 5px #3b6e87, 0 0 15px #5196b8, 0 0 20px #6bc6f2,2px 2px 4px rgba(0,0,0,0.8),
+        -2px -2px 2px rgba(255,255,255,0.2);
+    }
+    50% {
+        text-shadow: 0 0 5px #419294, 0 0 17px #56c2c4, 0 0 30px #6bf2f4,2px 2px 4px rgba(0,0,0,0.8),
+        -2px -2px 2px rgba(255,255,255,0.2);
+    }
+}
+.naglowek{
+    color: #6bc6f2;
+    text-align: center;
+    -webkit-text-stroke: 0.5px #293873;
+    padding:1px;
+    font-family: Harry_Potter_PL;
+    animation: glow 2s infinite alternate;
+}
+.naglowek h1 { font-size: 4em;  }
+.naglowek h2 { font-size: 3em; }
+.naglowek h3 { font-size: 2.25em; }
+.naglowek h4 { font-size: 1.75em; }
+.naglowek h5 { font-size: 1.375em; }
+.naglowek h6 { font-size: 1.125em; }
+.menu {
+    display: flex;
+    gap: 1px;               /* odstępy między przyciskami */
+    align-items: center;     /* wyrównanie pionowe (center / flex-start / stretch) */
+}
+.kolumna {
+    gap: 1px;               /* odstępy między przyciskami */
+    align-items: center;     /* wyrównanie pionowe (center / flex-start / stretch) */
+}
+
+.tabela_strony {
+    display:inline-block;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.frame{
+
+    margin:10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.frame iframe {
+    width: 170vw;
+    height: 50vh; /* 70% wysokości okna — dopasuje się dynamicznie */
+    border: 5px ridge #926F9A;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    background-color: #B67635;
+    transition: all 0.3s ease;
+}
+::-webkit-scrollbar{
+    width: 16px;
+    height: 16px;
+
+}
+
+/* Tło toru */
+::-webkit-scrollbar-track {
+    background:
+            url("../images/wood-track.bmp") repeat-y center/cover;
+    border-radius: 8px;
+    cursor: url('../images/scroll.png') 5 0, auto;
+
+}
+
+/* Sam suwak */
+::-webkit-scrollbar-thumb {
+    background:
+            url("../images/wood-track.bmp") center/cover;
+    border-radius: 8px;
+    border: 2px solid #4a3a2e; /* krawędź drewniana */
+    transition: 0.2s;
+    cursor: url('../images/scroll_red.png') 5 0, auto;
+}
+/* Hover — lekkie podświetlenie */
+::-webkit-scrollbar-thumb:hover {
+    filter: brightness(1.4);
+
+    box-shadow: 0 0 12px rgba(255, 230, 150, 0.7);
+}
+/* pojedyncza iskra */
+.spark {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, #FFD700, transparent);
+    opacity: 1.2;
+    transform: translate(-50%, -50%);
+    animation: fade 1.2s linear forwards;
+}
+
+
+/* animacja znikania */
+@keyframes fade {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+.copyright {
+    position: absolute;
+    bottom: -10vh; /* stała odległość od dołu okna */
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(230, 230, 230, 0.4);
+    pointer-events: none; /* nie przeszkadza w klikaniu */
+}
+@media (min-aspect-ratio: 4/3) {
+    body,html{
+        min-height: 125vh;
+    }
+    .kolumna {
+        display: flex;
+    }
+    .menu{
+        flex-direction: column;
+    }
+    .kolumna .box { /*wymiary przycisków */
+        width: 200px;
+        min-height: 100px;
+        height: 20vh;
+    }
+    .menu .box:first-child button {
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    /* ostatni przycisk */
+    .menu .box:last-child button {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 100px;
+    }
+    .frame iframe {
+        width: 150vw;
+        height: 80vh;
+        min-height:400px;/* 70% wysokości okna — dopasuje się dynamicznie */
+    }
+    .bodybuild{
+        top: 25%;
+        left: 20%;
+        transform: translate(-8%, -23%);
+    }
+    .copyright {
+        bottom: -25vh;
+    }
+    .linia_pierwsza{
+        flex-direction: column-reverse;
+    }
+    .box.btn-gold{
+        flex: 0 0 auto;
+        width: 60px;
+        height: 60px;
+    }
+}
