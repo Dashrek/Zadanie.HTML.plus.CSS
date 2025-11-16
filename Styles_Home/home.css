@@ -3,16 +3,10 @@ body,html{
     min-height: 110vh;
     cursor: url('../images/wand.png') 5 0, auto;
     transition: all 0.3s ease;
-    font-size:16px;
+    font-size:18px;
     overflow-x: hidden;
 }
-.bodybuild{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-25%, -50%);
-    overflow: hidden;
-}
+
 .Garamond{
     font-family: 'Garamond';
     font-weight: 400;
@@ -153,9 +147,10 @@ font-style:italic;}
     gap: 10px;
 }
 .box { /*wymiary przycisków */
-    display: inline-block;
-    width: 300px;
-    height: 90px;
+    display: flex;
+    flex-direction: row;
+    width: 23vw;
+    height: 8vh;
     text-align: center;
     line-height: 35px;/* wyśrodkowanie tekstu w pionie */
 }
@@ -166,18 +161,18 @@ font-style:italic;}
 
 /* pierwszy przycisk */
 .menu .box:first-child button {
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5em;
+    border-bottom-left-radius: 5em;
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
 }
 
 /* ostatni przycisk */
 .menu .box:last-child button {
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5em;
+    border-bottom-right-radius: 5em;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
 }
 
 .box button {
@@ -189,7 +184,7 @@ font-style:italic;}
     border-radius: 100px;
     background-color: #8D553E;
     color: #E6C852;
-    font-size: 37px;
+    font-size: 2.4em;
     -webkit-text-stroke: 0.7px #293873;
     font-family: Harry_Potter_PL;
     margin: 2px;
@@ -296,9 +291,10 @@ font-style:italic;}
 }
 
 .tabela_strony {
-    display:inline-block;
-    width: 50%;
-    height: 50%;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -315,7 +311,7 @@ font-style:italic;}
     overflow: hidden;
 }
 .frame iframe {
-    width: 170vw;
+    width: 90vw;
     height: 50vh; /* 70% wysokości okna — dopasuje się dynamicznie */
     border: 5px ridge #926F9A;
     border-radius: 16px;
@@ -383,7 +379,7 @@ font-style:italic;}
 }
 @media (min-aspect-ratio: 4/3) {
     body,html{
-        min-height: 125vh;
+        min-height: 100vh;
     }
     .kolumna {
         display: flex;
@@ -392,8 +388,8 @@ font-style:italic;}
         flex-direction: column;
     }
     .kolumna .box { /*wymiary przycisków */
-        width: 200px;
-        min-height: 100px;
+        width: 10em;
+        min-height: 5em;
         height: 20vh;
     }
     .menu .box:first-child button {
@@ -411,14 +407,9 @@ font-style:italic;}
         border-bottom-left-radius: 100px;
     }
     .frame iframe {
-        width: 150vw;
+        width: 80vw;
         height: 80vh;
         min-height:400px;/* 70% wysokości okna — dopasuje się dynamicznie */
-    }
-    .bodybuild{
-        top: 25%;
-        left: 20%;
-        transform: translate(-8%, -23%);
     }
     .copyright {
         bottom: -25vh;
