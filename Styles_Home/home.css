@@ -274,12 +274,12 @@ font-style:italic;}
     font-family: Harry_Potter_PL;
     animation: glow 2s infinite alternate;
 }
-.naglowek h1 { font-size: 4em;  }
-.naglowek h2 { font-size: 3em; }
-.naglowek h3 { font-size: 2.25em; }
-.naglowek h4 { font-size: 1.75em; }
-.naglowek h5 { font-size: 1.375em; }
-.naglowek h6 { font-size: 1.125em; }
+.naglowek h1 { font-size: 64px;  }
+.naglowek h2 { font-size: 48px; }
+.naglowek h3 { font-size: 36px; }
+.naglowek h4 { font-size: 28px; }
+.naglowek h5 { font-size: 22px; }
+.naglowek h6 { font-size: 18px; }
 .menu {
     display: flex;
     gap: 1px;               /* odstępy między przyciskami */
