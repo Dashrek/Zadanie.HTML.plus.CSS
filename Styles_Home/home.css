@@ -184,7 +184,7 @@ font-style:italic;}
     border-radius: 100px;
     background-color: #8D553E;
     color: #E6C852;
-    font-size: 2.4em;
+    font-size: 4vw;
     -webkit-text-stroke: 0.7px #293873;
     font-family: Harry_Potter_PL;
     margin: 2px;
@@ -311,7 +311,7 @@ font-style:italic;}
     overflow: hidden;
 }
 .frame iframe {
-    width: 90vw;
+    width: 100%;
     height: 50vh; /* 70% wysokości okna — dopasuje się dynamicznie */
     border: 5px ridge #926F9A;
     border-radius: 16px;
@@ -391,6 +391,9 @@ font-style:italic;}
         width: 10em;
         min-height: 5em;
         height: 20vh;
+    }
+    .box button{
+        font-size: 4vh;
     }
     .menu .box:first-child button {
         border-top-left-radius: 100px;
