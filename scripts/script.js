@@ -9,3 +9,13 @@ document.addEventListener("mousemove", (e) => {
         spark.remove();
     }, 400); // usuwa iskrę po animacji
 });
+document.addEventListener("DOMContentLoaded", () => {
+    if (window.self !== window.top) {
+        const elem = document.querySelector(".ukryj-w-iframe");
+        if (elem) elem.style.display = "none";
+    }
+    else if (window.self !== window.top) {
+        const elem = document.querySelector(".ukryj-w-iframe");
+        if (elem) elem.style.display = "none";
+    }
+});

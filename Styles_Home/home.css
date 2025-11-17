@@ -187,7 +187,7 @@ font-style:italic;}
     font-size: 28px;
     -webkit-text-stroke: 0.7px #293873;
     font-family: Harry_Potter_PL;
-    margin: 2px;
+    margin: 1px;
     text-shadow:
             2px 2px 2px rgba(0,0,0,0.8),
             -2px -2px 2px rgba(255,255,255,0.2);/*text-shadow: 4px 4px 8px black;*/
@@ -319,6 +319,7 @@ font-style:italic;}
     background-color: #B67635;
     transition: all 0.3s ease;
 }
+
 ::-webkit-scrollbar{
     width: 16px;
     height: 16px;
@@ -386,9 +387,9 @@ font-style:italic;}
         flex-direction: column;
     }
     .kolumna .box { /*wymiary przycisków */
-        width: 7.5em;
+        width: 7.7em;
         min-height: 5em;
-        height: 20vh;
+        height: 21vh;
     }
     .menu .box:first-child button {
         border-top-left-radius: 100px;
@@ -418,27 +419,60 @@ font-style:italic;}
         height: 60px;
     }
 }
-@media (max-width:450px) {
+@media (max-width:480px) {
     .naglowek h1 { font-size: 36px;  }
     .naglowek h2 { font-size: 28px; }
     .naglowek h3 { font-size: 22px; }
     .naglowek h4 { font-size: 18px; }
     .naglowek h5 { font-size: 15px; }
     .naglowek h6 { font-size: 13px; }
+    .menu .box:first-child button {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 2.5px;
+        border-bottom-right-radius: 2.5px;
+    }
+
+    /* ostatni przycisk */
+    .menu .box:last-child button {
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-top-left-radius: 2.5px;
+        border-bottom-left-radius: 2.5px;
+    }
     .subfont{
-        font-size: 0.6em;
+        font-size: 0.5em;
     }
     .box button{
-        font-size: 22px;
+        font-size: 20px;
     }
 }
-@media (max-height:450px) {
+@media (max-height:480px) {
     .naglowek h1 { font-size: 36px;  }
     .naglowek h2 { font-size: 28px; }
     .naglowek h3 { font-size: 22px; }
     .naglowek h4 { font-size: 18px; }
     .naglowek h5 { font-size: 15px; }
     .naglowek h6 { font-size: 13px; }
+    .menu .box:first-child button {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 2.5px;
+        border-top-right-radius: 2.5px;
+        border-bottom-right-radius: 2.5px;
+    }
+
+    /* ostatni przycisk */
+    .menu .box:last-child button {
+        border-top-right-radius: 2.5px;
+        border-bottom-right-radius: 2.5px;
+        border-top-left-radius: 2.5px;
+        border-bottom-left-radius: 50px;
+    }
+    .frame iframe {
+        width: 70vw;
+        height: 85vh;
+        min-height:300px;/* 70% wysokości okna — dopasuje się dynamicznie */
+    }
     .subfont{
         font-size: 0.75em;
     }
